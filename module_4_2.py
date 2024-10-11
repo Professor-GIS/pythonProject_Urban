@@ -6,4 +6,4 @@ def test_function():
 
 test_function()
 inner_function() 	#inner_function находится в локальной области имён внутри test_function и не определена на общем
-					#уровне global и её вызов с уровня global приведёт к ошибке.
+					#уровне global и её вызов с уровня global приведёт к ошибке
