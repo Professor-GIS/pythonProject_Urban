@@ -1,3 +1,5 @@
+#Домашняя работа по уроку "Атрибуты и методы объекта"
+
 class House:
 	def __init__(self, name, number_of_floors):
 		self.name = name
