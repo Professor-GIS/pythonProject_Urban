@@ -28,7 +28,7 @@ class Vehicle:
 		if new_color.lower() in self.__COLOR_VARIANTS:
 			self.__color = new_color
 		else:
-			print(f"Нельзя сменить цвет на {new_color}")
+			print(f"Нельзя сменить цвет на {new_color}.")
 
 
 class Sedan(Vehicle):
