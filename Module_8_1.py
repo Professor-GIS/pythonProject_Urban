@@ -4,7 +4,7 @@ def add_everything_up(a, b):
 	try:
 		x = round(a + b, 3)
 	except TypeError:
-		return f'{a}{b}'
+		return f'{str(a)}{str(b)}'
 	else:
 		return x
 
