@@ -25,13 +25,12 @@ class Shop:
 	def add(self, *products: Product):  # Оформляем процесс добавления товаров в файл-базу
 
 		for product in products:  # Перебираем все переданные продукты
-			file = open(self.__file_name, 'a')
 			if product.name in self.get_products():  # Проверяем нет ли такого продукта в базе
 				print(f'Продукт {product.name} уже есть в магазине')  # Ругаемся, если продукт уже есть в базе
 			else:
-
+				file = open(self.__file_name, 'a')
 				file.write(f'{product}\n')  # Добавляем в файл базу, если не нашли там такого имени
-			file.close()
+				file.close()
 
 
 s1 = Shop()
