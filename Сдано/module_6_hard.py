@@ -1,5 +1,6 @@
 # Дополнительное практическое задание по модулю*
 from math import sqrt, pi
+from random import triangular
 
 
 class Figure:
@@ -67,9 +68,10 @@ class Figure:
 
 
 class Circle(Figure):
-	sides_count = 1
+
 
 	def __init__(self, color, *__sides, filled=True, __radius=0):
+		self.sides_count = 1
 		super().__init__(color, __sides)
 		self.__radius = __sides[0] / (2 * pi)
 
@@ -78,9 +80,9 @@ class Circle(Figure):
 
 
 class Triangle(Figure):
-	sides_count = 3
 
 	def __init__(self, color, *__sides, filled=True):
+		self.sides_count = 3
 		super().__init__(color, __sides)
 
 	def get_square(self):
@@ -93,9 +95,9 @@ class Triangle(Figure):
 
 
 class Cube(Figure):
-	sides_count = 12
 
 	def __init__(self, color, *__sides, filled=True):
+		self.sides_count = 12
 		super().__init__(color, __sides)
 		x = self._Figure__sides
 		self.__sides = x
