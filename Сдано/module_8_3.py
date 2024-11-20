@@ -21,7 +21,7 @@ class Car:  # Создаём экземпляр класса
 		if not isinstance(car_numbers, str):
 			raise IncorrectCarNumbers('Некорректный тип данных для номеров: номер должен быть строковым значением (str)')
 		else:
-			if not len(car_numbers) == 6:
+			if not len(str(car_numbers)) == 6:
 				raise IncorrectCarNumbers('Неверная длина номера: номер должен состоять из 6 знаков')
 		return True
 
