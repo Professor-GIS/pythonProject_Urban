@@ -13,7 +13,7 @@ class Bank:
 		for i in range(100):
 			incr = randint(50, 500)
 			self.balance += incr
-			if self.balance >= 500 and self.lock.locked():
+			if self.balance >= 500 and self.lock.locked():#Проверяем размер баланса и не включена ли блокировка потока
 				self.lock.release()
 				sleep(0.01)  # Добавляем задержку после снятия замка, чтобы не наслаивались принты из разных потоков
 			print(f'Пополнение: {incr}. Баланс: {self.balance}')
@@ -28,7 +28,7 @@ class Bank:
 				print(f'Снятие: {decr}. Баланс: {self.balance}')
 			else:
 				print(f'Запрос отклонён, недостаточно средств')
-				self.lock.acquire()
+				self.lock.acquire()#Включаем блокировку и дожидаемся наполнения баланса 500+
 
 
 bk = Bank()
