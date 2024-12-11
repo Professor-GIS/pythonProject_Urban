@@ -12,7 +12,7 @@ params = {
 	"timezone": "Europe/Moscow"  # временная зона Москвы
 }
 response = requests.get(BASE_URL, params=params)
-if response.status_code == 200:
+if response.status_code == 200:#Если данные получены корректно
 	data = response.json()
 	# Поскольку индекс 0 представляет собой данные на текущий день, индекс 1 будет представлять данные на завтра
 	tomorrow_temp_min = data['daily']['temperature_2m_min'][1]
