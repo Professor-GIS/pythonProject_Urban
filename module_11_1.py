@@ -39,7 +39,6 @@ with open('photo.png', 'wb') as target:
 	photo = requests.get('https://sun9-19.userapi.com/impf/c627518/v627518696/314b/5jV_G2QVm0g.jpg?size=807x538&quality=96&sign=03c57ab15f301b86941f3db93dc6b848&type=album')
 	target.write(photo.content)
 # Загрузим фото в память для дальнейшей работы
-# with Image.open('photo.png') as img:
 with Image.open('photo.png') as img:
 	img.load()
 # Сделаем чёрно-белую версию
