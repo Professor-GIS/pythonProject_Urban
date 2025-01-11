@@ -6,7 +6,8 @@ from pprint import pprint
 def introspection_info(obj):
 	result = {}
 	# отделяем лишний текст(<clacss"">)и записываем значение в словарь
-	result['type'] = str(type(obj)).split(' ')[1][1:-2]
+	# result['type'] = str(type(obj)).split(' ')[1][1:-2]
+	result['type'] = type(obj).__name__
 	# генерируем список атрибутов, исключая служебные и вызываемые(методы); записываем в словарь
 	result['atributes'] = [atr for atr in dir(obj) if not atr.startswith('_') and not callable(getattr(obj, atr))]
 	# генерируем список методов, которые являются вызываемыми, исключая служебные; записываем в словарь
