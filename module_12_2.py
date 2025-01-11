@@ -2,7 +2,6 @@
 
 from runner_turnament import *
 import unittest
-from pprint import pprint
 
 
 class TournamentTest(unittest.TestCase):
