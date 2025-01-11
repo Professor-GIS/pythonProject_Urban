@@ -1,6 +1,5 @@
 # Домашнее задание по теме "Методы Юнит-тестирования"
 
-
 from runner_turnament import *
 import unittest
 from pprint import pprint
